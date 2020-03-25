@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap');
+
+*
+{
+	font-family: 'Montserrat', sans-serif;
+}
+
+html, body
+{
+	background: #1F1F1F;
+	padding: 0;
+	margin: 0;
+}
+
+.centerized_content
+{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 40%;
+	height: 40%;
+	text-align: center;
+}
+@media screen and (min-height: 751px)
+{
+	#pb1 {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	  z-index: 3;
+	  width: 100%;
+	  height: 46px;
+	  border-radius: 31px;
+	   background: radial-gradient(circle at center, #56F0D0 7%, #1C2C27 100%, #244F40 100%);
+	  box-shadow: 2px 3px 3px 2px rgba(0,0,0,0.12);
+	}
+}
+@media screen and (max-height: 750px)
+{
+	#pb1 {
+	position: relative;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	  z-index: 3;
+	  width: 100%;
+	  height: 46px;
+	  border-radius: 31px;
+	   background: radial-gradient(circle at center, #56F0D0 7%, #1C2C27 100%, #244F40 100%);
+	  box-shadow: 2px 3px 3px 2px rgba(0,0,0,0.12);
+	  transition: all .5s linear;
+	}
+}
+#pb_c {
+	position: relative;
+  z-index: 3;
+  width: var(--bar-width);
+  height: 100%;
+  border-radius: 31px;
+  background: radial-gradient(circle, #5CF056 35%, #1C2C27 110%, #244F40 110%);
+  transition: all .5s linear;
+}
+#_goalText {
+	display: block;
+  z-index: 3;
+  text-shadow: 2px 4px 4px rgba(0,0,0,0.85);
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 78px;
+  margin: -20px;
+	padding: -10px;
+  text-align: center;
+}
+#_m {
+	margin: -10px;
+	padding: -10px;
+ z-index: 3;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 39px;
+  text-align: center;
+}
+
+#a {
+	display: block;
+  z-index: 3;
+  margin: 4px;
+  text-shadow: 0px 2px 7px rgba(0,0,0,0.71);
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 44px;
+  text-align: center;
+}
+.info
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	background-color: white;
+	background: url(info.svg);
+	background-size: 24px;
+}
