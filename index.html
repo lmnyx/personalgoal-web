@@ -45,6 +45,7 @@ window.onload = function()
 				url: GOAL_URI,
 				success: function(data)
 				{
+					$("#_goalText").text(data.goal_name);
 					$('#curr_goal').text(data.got);
 					$('#max_goal').text(data.goal);
 					$("#pb_c").css("--bar-width", ((data.got*100)/data.goal)+"%");
