@@ -24,6 +24,12 @@
 
 <script type="text/javascript">
 const GOAL_URI = "https://yupda.now.sh"; // deployed on now.sh
+function UpdateData(goal, got)
+{
+	$('#curr_goal').text(got);
+	$('#max_goal').text(goal);
+	$("#pb_c").css("--bar-width", ((got*100)/goal)+"%");
+}
 window.onload = function()
 {
 	tippy('.info', {
@@ -35,9 +41,7 @@ window.onload = function()
 				success: function(data)
 				{
 					$("#_goalText").text(data.goal_name);
-					$('#curr_goal').text(data.got);
-					$('#max_goal').text(data.goal);
-					$("#pb_c").css("--bar-width", ((data.got*100)/data.goal)+"%");
+					UpdateData(data.goal, data.got);
 				}
 			});
 	setInterval(function()
@@ -47,9 +51,7 @@ window.onload = function()
 				success: function(data)
 				{
 					$("#_goalText").text(data.goal_name);
-					$('#curr_goal').text(data.got);
-					$('#max_goal').text(data.goal);
-					$("#pb_c").css("--bar-width", ((data.got*100)/data.goal)+"%");
+					UpdateData(data.goal, data.got);
 				}
 			});
 		}, 45000);
